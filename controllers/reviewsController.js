@@ -34,7 +34,8 @@ exports.aggregate = (async (req, res, next) => {
     let getData = async function(start=0){
         let sort_by = "recency";
         let limit = 10;
-        let token = "b0245046a570d1357995008f7d30f253c155f77a";
+        let token = process.env.TOKEN;
+        console.log(process.env.TOKEN);
         let source = req.query.source_name;
         let id;
         if(source == "yelp"){
